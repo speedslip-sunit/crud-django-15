@@ -5,7 +5,13 @@ from rest_framework.response import Response
 
 from .models import employee, department
 from .serializers import EmployeeSerializer, DepartmentSerializer
-from django.http import Http404
+from django.http import Http404, JsonResponse
+
+
+# echo
+@api_view(['GET'])
+def echo(request):
+    return JsonResponse({"status": "live"})
 
 
 # Create Department
@@ -42,3 +48,10 @@ def department_interact(request, department_id):
     elif request.method == 'DELETE':
         d.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+@api_view(['GET'])
+def department_list(request):
+    dlist = department.objects.all()
+    serializer = DepartmentSerializer(dlist, many=True)
+    return Response(serializer.data)
