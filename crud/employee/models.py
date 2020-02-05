@@ -23,6 +23,7 @@ class employee(models.Model):
     employee_id = models.CharField(primary_key=True, default=uuid_str, max_length=100)
     name = models.CharField(max_length=100)
     contract_employee = models.BooleanField(default=True)
+    department = models.ForeignKey(department, on_delete=models.SET_NULL, null=True, blank=True)
     age = models.IntegerField()
     address = models.TextField()
 

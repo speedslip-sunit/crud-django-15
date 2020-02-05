@@ -73,16 +73,18 @@ Request body
 	"name": "M James",
 	"contract_employee": false,
 	"age": 29,
+	"department": "1ade5f11-18a6-4f2c-93af-1506022e02b9",
 	"address": "52, Jefferson Street, NY"
 }
 
 Response:
 {
-    "employee_id": "0805ffc3-3751-4199-926f-fe5545d2a1b2",
+    "employee_id": "ee48d086-cd70-4465-9cb8-5bacf26c4295",
     "name": "M James",
     "contract_employee": false,
     "age": 29,
-    "address": "52, Jefferson Street, NY"
+    "address": "52, Jefferson Street, NY",
+    "department": "1ade5f11-18a6-4f2c-93af-1506022e02b9"
 }
 ```
 
@@ -98,7 +100,16 @@ Response:
         "name": "M James",
         "contract_employee": false,
         "age": 29,
-        "address": "52, Jefferson Street, NY"
+        "address": "52, Jefferson Street, NY",
+        "department": null
+    },
+    {
+        "employee_id": "ee48d086-cd70-4465-9cb8-5bacf26c4295",
+        "name": "M James",
+        "contract_employee": false,
+        "age": 29,
+        "address": "52, Jefferson Street, NY",
+        "department": "1ade5f11-18a6-4f2c-93af-1506022e02b9"
     }
 ]
 ```
@@ -117,11 +128,12 @@ Request Body:
 
 Response:
 {
-    "employee_id": "385afb36-96b4-4473-8531-7e77113bdb07",
+    "employee_id": "ee48d086-cd70-4465-9cb8-5bacf26c4295",
     "name": "J Thompson",
     "contract_employee": true,
     "age": 47,
-    "address": "52, Jefferson Street, NY"
+    "address": "52, Jefferson Street, NY",
+    "department": "1ade5f11-18a6-4f2c-93af-1506022e02b9"
 }
 ```
 
